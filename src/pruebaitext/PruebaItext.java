@@ -33,6 +33,7 @@ public class PruebaItext {
             File pdfFile = new File(filePath);
             if (pdfFile.exists()) {
                 Desktop.getDesktop().open(pdfFile);
+                System.out.println("Se abrio correctamente");
             } else {
                 JOptionPane.showMessageDialog(null, "El archivo PDF no fue encontrado.");
             }
