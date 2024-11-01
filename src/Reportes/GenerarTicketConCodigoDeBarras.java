@@ -21,7 +21,7 @@ public class GenerarTicketConCodigoDeBarras {
             Font contentFont = FontFactory.getFont(FontFactory.HELVETICA, 10);
 
             // Encabezado de la tienda
-            Paragraph header = new Paragraph("Supermercado Ejemplo", headerFont);
+            Paragraph header = new Paragraph("Supermercado MAKRO", headerFont);
             header.setAlignment(Element.ALIGN_CENTER);
             document.add(header);
 
@@ -72,7 +72,7 @@ public class GenerarTicketConCodigoDeBarras {
             document.add(new Paragraph(" "));
 
             // Código de barras con el número de ticket como ejemplo
-            String ticketNumber = "00012345";
+            String ticketNumber = "00019992"; //cambiar
             Barcode128 barcode = new Barcode128();
             barcode.setCode(ticketNumber);
             barcode.setCodeType(Barcode.CODE128);
