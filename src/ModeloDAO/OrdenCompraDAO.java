@@ -14,6 +14,8 @@ import com.itextpdf.text.Phrase;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
+import java.awt.Desktop;
+import java.io.File;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -111,6 +113,14 @@ public OrdenCompra buscarOrdenCompra(int idOc) {
             // Añadir tabla al documento
             document.add(table);
             System.out.println("Reporte PDF generado exitosamente en: " + filePath);
+            //abrir
+            File pdfFile=new File(filePath); //Objeto tipo archivo que contiene su ruta
+            if (pdfFile.exists()) {
+                Desktop.getDesktop().open(pdfFile);
+                System.out.println("El archivo se abrio automaticamente");
+            }else{
+                System.out.println("No se encontro el archivo para abrir");
+            }
         } catch (DocumentException | IOException e) {
             System.out.println("Error al generar el reporte PDF: " + e.getMessage());
         } finally {

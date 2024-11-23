@@ -58,6 +58,7 @@ public class practicando {
             if (pdfFile.exists()) {
                 Desktop.getDesktop().open(pdfFile);
                 System.out.println("El archivo se abrio automaticamente");
+                System.out.println("------------------------------------"); //linea nueva
             }else{
                 System.out.println("No se encontro el archivo para abrir");
             }
